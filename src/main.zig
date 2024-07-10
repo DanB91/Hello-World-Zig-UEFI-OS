@@ -34,8 +34,8 @@ pub fn main() void {
     }
     //var screen_width: usize = gop.mode.info.horizontal_resolution;
     //var screen_height: usize = gop.mode.info.vertical_resolution;
-    var frame_buffer_address: u64 = gop.mode.frame_buffer_base;
-    var frame_buffer_len: usize = gop.mode.frame_buffer_size;
+    const frame_buffer_address: u64 = gop.mode.frame_buffer_base;
+    const frame_buffer_len: usize = gop.mode.frame_buffer_size;
 
     //TODO dynamically allocate memory descriptors with allocatePool() to guarantee that the array to hold them is big enough
     var memory_descriptors: [64]uefi.tables.MemoryDescriptor = undefined;
